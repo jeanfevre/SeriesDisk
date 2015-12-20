@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SERIESTV" Class="SeriesDisqueDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=RIO;Initial Catalog=SERIESTV;Persist Security Info=True;User ID=sa" SettingsObjectName="SeriesDisk.Properties.Settings" SettingsPropertyName="SERIESTVConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.t_serie" Member="t_serie">
+    <Type Name="t_serie">
+      <Column Name="serie_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="serie_nom" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="serie_an" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="disque_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="serie_maj" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Association Name="t_disque_t_serie" Member="t_disque" ThisKey="disque_id" OtherKey="disque_id" Type="t_disque" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.t_disque" Member="t_disque">
+    <Type Name="t_disque">
+      <Column Name="disque_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="disque_vol_name" Type="System.String" DbType="NVarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="disque_maj" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Association Name="t_disque_t_serie" Member="t_serie" ThisKey="disque_id" OtherKey="disque_id" Type="t_serie" />
+    </Type>
+  </Table>
+</Database>

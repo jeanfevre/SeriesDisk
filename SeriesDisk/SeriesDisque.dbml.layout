@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SeriesDisque">
+  <DataContextMoniker Name="/SeriesDisqueDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9040f9a9-e009-4184-99e7-e794781281fa" absoluteBounds="3.5, 0.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/SeriesDisqueDataContext/t_serie" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a61756a1-dfb7-4bd6-a1fa-2b98fdf30ea8" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5fb6c9fd-b74c-423f-8441-f4de5cd32adb" absoluteBounds="0.75, 1.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/SeriesDisqueDataContext/t_disque" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e3f764c-38ba-4915-987f-5d38ff5d0ea4" absoluteBounds="0.765, 1.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.81814697265625); (3.5 : 1.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SeriesDisqueDataContext/t_disque/t_disque_t_serie" />
+      <nodes>
+        <classShapeMoniker Id="5fb6c9fd-b74c-423f-8441-f4de5cd32adb" />
+        <classShapeMoniker Id="9040f9a9-e009-4184-99e7-e794781281fa" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
