@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SERIESTV" Class="SerieTvDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=RIO;Initial Catalog=SERIESTV;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SERIESTVConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.jf_sp_search_serie_by_name" Method="jf_sp_search_serie_by_name">
+    <Parameter Name="serie_nom" Type="System.String" DbType="NVarChar(256)" />
+    <ElementType Name="jf_sp_search_serie_by_nameResult">
+      <Column Name="serie_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="serie_nom" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="serie_an" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="disque_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>
